@@ -1,0 +1,40 @@
+.top-nav {
+  background: green;
+  padding: 3rem 2rem;
+
+  &__nav {
+  }
+
+  &__items {
+    display: flex;
+
+    list-style: none;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+
+      text-decoration: none;
+
+      font-weight: bold;
+      color: $color-white;
+
+      transition: all 0.3s;
+    }
+
+    &:active,
+    &:hover {
+      color: rgb(33, 185, 227);
+
+      transform: translateY(-0.3rem);
+    }
+  }
+}

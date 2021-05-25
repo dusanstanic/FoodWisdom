@@ -1,0 +1,44 @@
+.search {
+  background: linear-gradient(
+    to right bottom,
+    $color-primary,
+    $color-primary-light
+  );
+  grid-column: sidebar-start / full-end;
+
+  padding: 1rem;
+
+  &__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__input {
+    padding: 0.5rem;
+    transition: all 0.5s;
+    border: 1px solid $color-grey-dark;
+    flex-basis: 50%;
+
+    &:focus {
+      outline: none;
+
+      box-shadow: 0rem 1rem 2rem rgba($color-black, 0.5);
+    }
+  }
+
+  &__btn {
+    border: 1px solid $color-grey-dark;
+    padding: 0.5rem;
+    background: $color-white;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-grey-light-2;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

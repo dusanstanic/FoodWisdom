@@ -1,0 +1,17 @@
+$color: aqua;
+
+body {
+  background: $color;
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  grid-column: auto;
+  background: url("./images/vacation.jpg");
+}
+
+a {
+  color: red;
+}
