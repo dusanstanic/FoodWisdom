@@ -1,13 +1,23 @@
 .slider {
-  height: 80vh;
+  //height: 100vh;
+  position: relative;
+
+  overflow: hidden;
+
+  &__wrapper {
+    width: 1000rem;
+    position: relative;
+    display: flex;
+  }
 
   &__slide {
+    background: $color-grey-light-2;
+
     display: flex;
-    align-items: center;
   }
 
   &__about {
-    padding: 2rem;
+    align-self: center;
 
     display: flex;
     flex-direction: column;
@@ -39,6 +49,7 @@
       text-decoration: none;
 
       transition: all 0.3s;
+      -webkit-user-drag: none;
     }
 
     &:hover,
@@ -57,7 +68,55 @@
   }
 
   &__img {
+    -webkit-user-drag: none;
+
     width: 100%;
+    display: block;
     height: auto;
   }
+
+  &__nav {
+    width: 100%;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  &__btn {
+    width: 5rem;
+    height: 5rem;
+
+    position: absolute;
+
+    background: rgb(8, 130, 36);
+    border: none;
+    border-radius: 50%;
+    // padding: 1rem;
+
+    font-family: "Latos";
+    font-size: 3rem;
+    font-weight: bold;
+    color: $color-white;
+
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &--right {
+      right: 2rem;
+    }
+
+    &--left {
+      left: 2rem;
+    }
+  }
+}
+
+.shift {
+  transition: all 0.5s;
 }
